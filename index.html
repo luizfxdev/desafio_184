@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dança dos Pixels</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1><i class="fa-solid fa-gamepad"></i> Dança dos Pixels</h1>
+        <p>Inverta sprites pixelados como em um jogo retrô!</p>
+      </div>
+
+      <div class="input-group">
+        <label for="matrixInput">Insira a matriz (ex: [[1,2,3],[4,5,6],[7,8,9]]):</label>
+        <input type="text" id="matrixInput" placeholder="Ex: [[1,2,3],[4,5,6],[7,8,9]]" />
+      </div>
+
+      <div class="button-group">
+        <button class="glow-on-hover" id="invertBtn" style="background-color: #d83434">
+          <i class="fas fa-arrows-alt-v"></i> INVERTER
+        </button>
+        <button class="glow-on-hover" id="returnBtn" style="background-color: #38667f">
+          <i class="fas fa-undo"></i> RETORNAR
+        </button>
+      </div>
+
+      <div class="result-container">
+        <h2><i class="fa-solid fa-square-poll-vertical"></i> Resultado:</h2>
+        <div class="matrix-display">
+          <div class="matrix-column">
+            <h3>Original:</h3>
+            <div id="originalOutput" class="result-output"></div>
+          </div>
+          <div class="matrix-column">
+            <h3>Invertida:</h3>
+            <div id="resultOutput" class="result-output"></div>
+          </div>
+        </div>
+        <div id="animationContainer" class="animation-container">
+          <img src="images/animated.gif" alt="Animação de dança" class="dancing-animation" />
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h3><i class="fas fa-info-circle"></i> Como usar:</h3>
+        <p>
+          Insira uma matriz no formato JSON (ex: [[1,2],[3,4]]) e clique em INVERTER para ver a versão invertida das
+          matrizes.
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
